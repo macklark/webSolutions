@@ -11,5 +11,5 @@ Create tailwind configure file
 npx tailwindcss init -p
 ```
 
-Create a project in firebase
+Create backend - 
 [firebase](https://firebase.google.com/)
