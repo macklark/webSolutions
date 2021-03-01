@@ -6,23 +6,28 @@ const getPost = (id) => {
     const description = ref(null)
     const error = ref(null)
     const likers = ref([])
+    const createdOn = ref(null)
 
     const load = async () => {
         try{
-            let res = await firestoreStorage.collection("blogs").doc(id).get()
+            let res = await firestoreStorage.collection("blogs").doc(id).onSnapshot((doc) => {
+                title.value = doc.data().title
+                description.value = doc.data().description
+                likers.value = doc.data().likers
+                createdOn.value = doc.data().createdOn
+            })
 
             if(!res.exists){
-                throw Error("Post does not exis")
+                throw Error("Post does not exist")
             }
-            title.value = res.data().title
-            description.value = res.data().description
+
         }catch(err){
             error.value = err.message
         }
     }
 
     return {
-        error, load, title, description
+        error, load, title, description, likers, createdOn
     }
 }
 
