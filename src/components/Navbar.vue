@@ -5,7 +5,6 @@
     </h3>
     <nav class="space-x-4 xs:hidden lg:inline">
       <div class = "inline text-white rounded-lg cursor-pointer" v-if = "!User" @click = "signUphandler">
-        <!-- <i class="fab fa-google"></i> -->
         <img src = "../assets/btn.png" alt = "google" class = "w-40 h-10 inline hover:opacity-75 transition duration-500 ease-in-out">
       </div>
       <div
@@ -20,6 +19,7 @@
         :to="{ name: 'About' }"
         >About</router-link
       >
+      <img :src = "User.photoURL" alt = "avatar" class = "inline rounded-full w-10 h-10" v-if = "User">
     </nav>
     <nav class="xs:inline lg:hidden text-white cursor-pointer">
       <i class="fas fa-bars fa-lg" @click="dropdownHandler"></i>
