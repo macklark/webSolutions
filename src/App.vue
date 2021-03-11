@@ -3,13 +3,14 @@
 </template>
 
 <script>
-import About from "@/views/About.vue"
-import Dashboard from "@/views/Dashboard.vue"
-import Notauth from "@/views/Notauth.vue"
-import Newform from "@/views/Newform.vue"
-import Yourblogs from "@/views/Yourblogs.vue"
-    export default{
-        name : "App",
-        components : {About, Dashboard, Notauth, Yourblogs, Newform}
-    }
+import About from "@/views/About.vue";
+import Dashboard from "@/views/Dashboard.vue";
+import Notauth from "@/views/Notauth.vue";
+import Newform from "@/views/Newform.vue";
+import Singlepost from "@/views/Singlepost.vue";
+import Profile from "@/views/Profile.vue";
+export default {
+    name: "App",
+    components: { About, Dashboard, Notauth, Newform, Singlepost, Profile },
+};
 </script>

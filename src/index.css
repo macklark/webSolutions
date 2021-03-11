@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+@layer base {
+    h1 {
+        @apply text-4xl;
+        @apply font-bold;
+    }
+    h2 {
+        @apply text-xl;
+    }
+    code {
+        @apply bg-gray-200;
+        @apply p-2;
+        @apply pl-2;
+        @apply border-gray-100;
+    }
+}
